@@ -1,0 +1,22 @@
+.navbar{
+    background : transparent;
+    position: relative;
+    height: 3rem;
+}
+.navbar.active{
+    transition: 0ms;
+    position: sticky;
+    top: 3px;
+    background-color: black;
+    height: 5%;
+} 
+.navbar ul{
+    list-style: none;
+    display: flex;
+    place-content: center;
+}
+.navbar ul li{
+    padding-left: 50px;   
+    padding-right: 50px;
+}
+

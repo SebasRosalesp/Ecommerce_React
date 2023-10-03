@@ -16,7 +16,7 @@ const List = () =>{
     },[]);
 
     return(
-        <div className="listContainer">
+        <div className="listContainer" key={list}>
             {list.map(producto => {
                 return(
                     <div id="Card" className="Card" key={producto.id}>
@@ -26,7 +26,6 @@ const List = () =>{
                         <span>Categoría{producto.type}</span>
                         <span>Material: {producto.material}</span>
                         <span>Descripción: {producto.description}</span>
-                       
                     </div>
                 );
             })}

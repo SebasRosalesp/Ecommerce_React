@@ -1,9 +1,11 @@
 import React from "react";
+import './Footer.css'
+
 
 const Footer = ()=>{
 
     return(
-        <div>
+        <div className="footer">
             <ul className="aboutFoot">
                 <li>Acerca de nosotros:</li>
                 <li>Mision y vision</li>

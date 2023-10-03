@@ -7,7 +7,7 @@ const Products = ()=> {
 
     return(
         <div>
-            <p>productos</p>
+            <p>Productos</p>
             <List/>
         </div>   
     )

@@ -13,6 +13,7 @@ const List = () =>{
         }
 
         fetchList();
+        []
     },[]);
 
     return(

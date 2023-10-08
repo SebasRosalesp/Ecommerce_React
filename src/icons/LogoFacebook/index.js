@@ -1,0 +1,1 @@
+export { LogoFacebook } from "./LogoFacebook";

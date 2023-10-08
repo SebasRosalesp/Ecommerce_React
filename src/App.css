@@ -19,12 +19,3 @@ a {
 }
 /*=======================================================================================================*/
 
-.slider {
-  border: 1px solid white;
-  width: 700px;
-  height: 25rem;
-  margin: 0 auto;
-}
-.dots{
-  justify-content: center;
-}

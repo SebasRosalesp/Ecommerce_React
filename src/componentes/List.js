@@ -13,7 +13,6 @@ const List = () =>{
         }
 
         fetchList();
-        []
     },[]);
 
     return(

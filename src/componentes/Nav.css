@@ -1,22 +1,60 @@
-.navbar{
-    background : transparent;
-    position: relative;
-    height: 3rem;
-}
-.navbar.active{
-    transition: 0ms;
-    position: sticky;
-    top: 3px;
-    background-color: black;
-    height: 5%;
-} 
-.navbar ul{
-    list-style: none;
-    display: flex;
-    place-content: center;
-}
-.navbar ul li{
-    padding-left: 50px;   
-    padding-right: 50px;
+@media screen {
+
+        @media (max-width: 991.98px) {
+            @keyframes slide-right{0%{transform:translateX(-150px)}100%{transform:translateX(0px)}}
+
+           @keyframes slide-left{0%{transform:translateX(0)}100%{transform:translateX(-100vw)}}
+
+            .navbar{
+                position: fixed;
+                top: 0;
+            }
+            .hamburger{
+                background-color: black;
+                width: 70vw;
+                height: 100vh;
+                transition: .5s;
+                -webkit-animation:slide-left .5s cubic-bezier(.25,.46,.45,.94) both;animation:slide-left .5s cubic-bezier(.25,.46,.45,.94) both;
+                top: 0;
+                z-index: 1;
+                position: absolute;
+            }
+            .showHamburger{
+                top: 0;
+                background-color: black;
+                width: 70vw;
+                height: 100vh;
+                transition: .5s;
+                -webkit-animation:slide-right .3s cubic-bezier(.25,.46,.45,.94) both;animation:slide-right .3s cubic-bezier(.25,.46,.45,.94) both;
+                z-index: 1;
+                position: absolute;
+            }
+            .navButton{
+                background:none;
+                border: none;
+            }
+            .userContainer{
+                display: flex;
+                flex-direction: column;
+            }
+            .userContainer img{
+                place-self: center;
+                width: 2rem;
+                border-radius: 50%;
+                display: flex;
+            }
+            ul{
+                border: 1px solid white;
+                padding: 0;
+                padding-top: 40px;
+            }
+            li{
+                list-style: none;
+                flex-direction: column;
+                padding-bottom: 30px;
+            }
+
+        }
+    
 }
 

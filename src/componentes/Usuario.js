@@ -1,8 +1,11 @@
 import React, {useContext} from "react";
 import { ThemeContext } from "./Context/ThemeContext";
 
-const Usuario = ()=>{
+const Usuario = ({inicio})=>{
     const {contextData} = useContext(ThemeContext);
+
+    if(!inicio){
+        
 
     if(contextData !== ''){
         return(
@@ -20,6 +23,9 @@ const Usuario = ()=>{
         )
 
     }
+    }else{
+        return(<p>{contextData.fullname}</p>)
+    };
 }
 
 export default Usuario;

@@ -48,7 +48,7 @@ const Navbar = () =>{
                     <li><Link to="Productos">Productos</Link></li>
                     <li><Link to ="Registro">Registrate || Inicia sesión</Link></li>
                 </ul>
-                <Usuario/>
+                <Usuario inicio={false}/>
             </div>
         </div>
     );

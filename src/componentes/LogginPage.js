@@ -8,10 +8,11 @@ import { ThemeContext } from "./Context/ThemeContext";
 const LogginPage = ()=>{
     const [usuarios, setUsuarios] = useState([]);
     const[users, setUsers] = useState([]);
-    const [loggedIn, setLoggedIn] = useState(false);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const {contextData, setContextData} = useContext(ThemeContext);
+    const [loggedIn, setLoggedIn] = useState(contextData?true:false);
+    
     
 
     useEffect(()=>{
@@ -58,6 +59,7 @@ const LogginPage = ()=>{
                         <h2>Iniciar Sesion</h2>
                         <input
                             className="email1"
+                            autoComplete="true"
                             type="email"
                             placeholder="Correo Electronico"
                             value={email}

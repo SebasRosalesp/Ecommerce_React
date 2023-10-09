@@ -1,5 +1,5 @@
 import React,{useContext} from 'react';
-import { ThemeContext } from './componentes/Context/ThemeContext';
+import { ThemeContext } from './Context/ThemeContext';
 
 
 const User = () => {

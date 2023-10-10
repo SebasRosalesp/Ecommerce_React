@@ -1,0 +1,1 @@
+export { LogoTwitch } from "./LogoTwitch";

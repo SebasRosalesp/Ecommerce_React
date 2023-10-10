@@ -8,6 +8,7 @@
             .navbar{
                 position: fixed;
                 top: 0;
+                z-index: 300;
             }
             .hamburger{
                 background-color: black;
@@ -16,7 +17,7 @@
                 transition: .5s;
                 -webkit-animation:slide-left .5s cubic-bezier(.25,.46,.45,.94) both;animation:slide-left .5s cubic-bezier(.25,.46,.45,.94) both;
                 top: 0;
-                z-index: 1;
+                z-index: 300;
                 position: absolute;
             }
             .showHamburger{
@@ -26,7 +27,7 @@
                 height: 100vh;
                 transition: .5s;
                 -webkit-animation:slide-right .3s cubic-bezier(.25,.46,.45,.94) both;animation:slide-right .3s cubic-bezier(.25,.46,.45,.94) both;
-                z-index: 1;
+                z-index: 300;
                 position: absolute;
             }
             .navButton{
@@ -42,6 +43,7 @@
                 width: 2rem;
                 border-radius: 50%;
                 display: flex;
+                height: auto;
             }
             ul{
                 border: 1px solid white;
@@ -56,5 +58,59 @@
 
         }
     
-}
+    @media (min-width: 991.99px){
+        @keyframes slide-right{0%{transform:translateX(-150px)}100%{transform:translateX(0px)}}
 
+        @keyframes slide-left{0%{transform:translateX(0)}100%{transform:translateX(-100vw)}}
+
+        .navbar{
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            
+        }
+        .hamburger{
+            border: 1px solid white;
+            display: flex;
+            width: 100vw;
+            padding-top: 40px;
+            justify-content: space-between;
+        }
+        .right{
+            display: flex;
+            flex-direction: column;
+            width: 30vw;
+            border: 1px solid white;
+            place-items: flex-end;
+            padding-right: 2rem;
+        }
+        .navButton{
+            display: none;
+        }
+        
+        ul{
+            border: 1px solid white;
+            display: flex;
+            width: 50vw;
+            justify-content: space-evenly;
+        }
+        li{
+            list-style: none;
+        }
+        .userContainer{
+            display: flex;
+            flex-direction: row;
+        }
+        .userContainer p{
+            display: none;
+        }
+        .userContainer img{
+            place-self: center;
+            width: 2rem;
+            height: auto;
+            border-radius: 50%;
+            display: flex;
+            margin-right: 1rem;
+        }
+    }
+}

@@ -35,4 +35,15 @@
         list-style: none;;
         text-align:left;
     }
+    
+    .pop{
+        display: none;
+        position: absolute;
+        z-index: 100;
+    }
+    .showPop{
+        display: flex;
+        position:   absolute;
+        z-index: 100;
+    }
   }

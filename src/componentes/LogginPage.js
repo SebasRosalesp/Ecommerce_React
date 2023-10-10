@@ -59,12 +59,14 @@ const LogginPage = ()=>{
                         <h2>Iniciar Sesion</h2>
                         <input
                             className="email1"
+                            id="email1"
                             autoComplete="true"
                             type="email"
                             placeholder="Correo Electronico"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}/>
                         <input
+                            id="password1"
                             className="password1"
                             type="password"
                             placeholder="Clave de acceso"

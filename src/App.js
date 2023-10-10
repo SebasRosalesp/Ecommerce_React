@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from "./componentes/Navbar";
 import Footer from "./componentes/Footer";
 import LogginPage from "./componentes/LogginPage";
+import Cart from "./componentes/Cart";
 
 const App = () => {
   
@@ -18,6 +19,7 @@ const App = () => {
               <Route path="Productos" element={ <Products/> } />
               <Route path="Inicio" element={<Inicio/>} />
               <Route path="Registro" element={<LogginPage/>} />
+              <Route path="Carrito" element={<Cart/>}/>
             </Routes>
             <Footer/>
     </Router>

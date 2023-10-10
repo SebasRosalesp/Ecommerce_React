@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import './Nav.css'
 import'./NavButton.css'
 import Usuario from "./Usuario";
+import Cart from "./Cart";
 
 
 
@@ -29,7 +30,6 @@ const Navbar = () =>{
         chancheHamburguer();
         changeButton();
     }
-
     return(
         <div className= 'navbar'>
             <button className='navButton' onClick={change}>
@@ -47,8 +47,12 @@ const Navbar = () =>{
                     <li><Link to="Inicio">Inicio</Link></li>
                     <li><Link to="Productos">Productos</Link></li>
                     <li><Link to ="Registro">Registrate || Inicia sesión</Link></li>
+                    <li><Link to="Carrito">Carrito</Link></li>
                 </ul>
-                <Usuario inicio={false}/>
+                <div className="right">
+                    <Usuario inicio={false}/>
+                    <Cart nav={true} card={false}/>
+                </div>
             </div>
         </div>
     );

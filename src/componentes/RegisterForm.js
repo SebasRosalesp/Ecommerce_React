@@ -47,18 +47,23 @@ const RegisterForm = ({onRegister})=>{
         <div className="Registro">
             <h2>Registro</h2>
             <input
+            id="name"
             type="text"
+            autoComplete="true"
             placeholder="Nombre"
             value={name}
             onChange={(e)=> setName(e.target.value)}
             />
             <input
+            id="email"
             type="text"
+            autoComplete="true"
             placeholder="Email"
             value={email}
             onChange={(e)=> setEmail(e.target.value)}
             />
             <input
+            id="password"
             type="password"
             placeholder="Password"
             value={password}

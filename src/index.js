@@ -4,13 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ThemeContextProvider } from './componentes/Context/ThemeContext';
-
+import { CartProvider } from "react-use-cart";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <ThemeContextProvider>
+    <CartProvider>
         <App/>
+    </CartProvider>
     </ThemeContextProvider>
 );
 

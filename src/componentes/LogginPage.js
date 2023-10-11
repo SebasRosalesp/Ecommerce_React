@@ -1,7 +1,7 @@
 import React, {useContext, useEffect, useState} from "react";
 import RegisterForm from "./RegisterForm";
 import { ThemeContext } from "./Context/ThemeContext";
-
+import './register.css'
 
 
 
@@ -50,31 +50,38 @@ const LogginPage = ()=>{
     };
     
     return(
-        <div className="Loggin">
+        <div className="loggin">
             {
                 loggedIn ?(
                     <h2>Bienvenido {contextData.fullname}</h2>
                 ) : (
                     <>
-                        <h2>Iniciar Sesion</h2>
-                        <input
-                            className="email1"
-                            id="email1"
-                            autoComplete="true"
-                            type="email"
-                            placeholder="Correo Electronico"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}/>
-                        <input
-                            id="password1"
-                            className="password1"
-                            type="password"
-                            placeholder="Clave de acceso"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)} />
-                        <button className="button1" onClick={handleLogin} >Iniciar</button>
-                        <div className="Divisor"></div>
+                        <div className="logginContainer">
+                            <h2 className="title">Inicia Sesión</h2>
+                            <form className="logginForm">
+                            <input
+                                className="email1"
+                                id="email1"
+                                autoComplete="true"
+                                type="email"
+                                placeholder="Correo Electronico"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}/>
+                            <input
+                                id="password1"
+                                className="password1"
+                                autoComplete="true"
+                                type="password"
+                                placeholder="Clave de acceso"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)} />
+                            <button className="button1" onClick={handleLogin} >Iniciar</button>
+                            </form>
+                        </div>
+                        <div className="divisor"></div>
+                        <div className="registerContainer">
                         <RegisterForm onRegister={handleRegister}/>
+                        </div>
                     </>)
             }
         </div>

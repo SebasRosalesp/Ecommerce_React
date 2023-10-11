@@ -1,49 +1,141 @@
-@media only screen and (max-width: 768px) {
-    /* For mobile phones: */
-    .listContainer {
-        width: 100vw;
-        display: flex;
-        flex-direction: column;
+@media screen {
+    @media(max-width: 700px){
         
-    }
-    .Card{
-        width: 80vw;
-        padding: 20px;
-        height: 70vh;
-        margin: 0 auto;
-        border: solid black 1px;
-        display: flex;
-        flex-wrap: wrap;
-        margin-bottom: 20px;
+        .listContainer {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            overflow-x: hidden;
+            
+        }
+        .products .title{
+            margin-bottom: 20px;
+        }
+        .Card{
+            margin: 0 auto;
+            width: 80vw;
+            padding: 20px;
+            height: fit-content;
+            justify-content: center;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            background-color: #26272d4f;
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            box-shadow: 1px 1px 10px 1px;
+        }
+        .Card img{
+            height: 10rem;
+            background-color: bisque;
+            margin: 0 auto;
+            border-radius: 50%;
+        }
+        span{
+            width: 100%;
+        }
+        .Card h1{
+            height: 1rem;
+            font-size: large;
+        }
+        .Card ul{
+            display: inline;
+            overflow: auto;
+            height: 4rem;
+        }
+        .Card ul li{
+            list-style: none;;
+            text-align:left;
+        }
+        
+        .pop{
+            display: none;
+            position: absolute;
+            z-index: 100;
+        }
+        .showPop{
+            display: flex;
+            position:   absolute;
+            z-index: 100;
+        }
+}
+    @media(min-width: 701px){
+        .listContainer {
+            display: flex;
+            overflow-x: hidden;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+        }
+        .products .title{
+            margin-bottom: 20px;
+        }
+        .Card{
+            margin: 0 auto;
+            width: 15rem;
+            padding: 20px;
+            height: 27rem;
+            justify-content: center;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 50px;
+            background-color: #26272d4f;
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            box-shadow: 1px 1px 10px 1px;
+        }
+        .Card img{
+            height: 10rem;
+            background-color: bisque;
+            margin: 0 auto;
+            border-radius: 50%;
+        }
+        span{
+            width: 100%;
+        }
+        .Card h1{
+            height: 1rem;
+            font-size: large;
+        }
+        .Card ul{
+            display: inline;
+            overflow: auto;
+            height: 4rem;
+        }
+        .Card ul li{
+            list-style: none;;
+            text-align:left;
+        }
+        
+        .pop{
+            display: none;
+            position: absolute;
+            z-index: 100;
+        }
+        .showPop{
+            display: flex;
+            position: fixed;
+            bottom: 0;
+            z-index: 100;
+            background-color: white;
+            width: 25rem;
+            height: 5rem;
+            place-items: center;
+            justify-content: center;
+            border-radius: 10px 10px 0px 0px;
 
+        }
+        .addToCart{
+            border-radius: 10px;
+            border: 0px;
+            width: 60%;
+            padding: 10px;
+            margin: 10px;
+            background-color: rgb(6, 179, 6);
+        }
+        .addToCart:hover{
+            background-color: green;
+        }
     }
-    .Card img{
-        height: 10rem;
-        background-color: bisque;
-        margin: 0 auto;
-    }
-    .Card h1{
-        height: 1rem;
-        font-size: large;
-    }
-    .Card ul{
-        display: inline;
-        overflow: auto;
-        height: 4rem;
-    }
-    .Card ul li{
-        list-style: none;;
-        text-align:left;
-    }
-    
-    .pop{
-        display: none;
-        position: absolute;
-        z-index: 100;
-    }
-    .showPop{
-        display: flex;
-        position:   absolute;
-        z-index: 100;
-    }
-  }
+
+}

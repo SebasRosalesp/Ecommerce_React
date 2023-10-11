@@ -26,6 +26,7 @@ const List = () =>{
 
     return(
         <div className="listContainer" key={list}>
+            <p className={(!agregado ? 'pop' : 'showPop')}>Agregado con éxito</p>
             {list.map((producto) => {
                 const product =
                     {
@@ -36,7 +37,6 @@ const List = () =>{
                     };
                 return(
                     <>
-                        <p className={(!agregado ? 'pop' : 'showPop')}>Agregado con éxito</p>
                     <div id="Card" className="Card" key={producto.id}>
                         <img src={producto.imagen} alt={producto.name} key={producto.imagen}/>
                         <h1 key={producto.name}>{producto.name}</h1>
@@ -44,7 +44,7 @@ const List = () =>{
                         <span key={producto.type}>Categoría{producto.type}</span>
                         <span key={producto.material}>Material: {producto.material}</span>
                         <span key={producto.description}>Descripción: {producto.description}</span>
-                        <button onClick={()=>{
+                        <button className="addToCart" onClick={()=>{
                             addItem(product);
                             setAgregado(true);
                             setTimeout(() => {

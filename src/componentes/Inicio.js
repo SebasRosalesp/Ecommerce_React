@@ -7,7 +7,7 @@ import NuevoCarousel from "./NuevoCarousel";
 const Inicio = ()=>{
     return(
         <>
-            <h1>Explore nuestros productos</h1>
+            <h2 className="title">Explore nuestros productos</h2>
             <Carousel />
             <h2>Productos en oferta</h2>
             <OfertaCarousel />

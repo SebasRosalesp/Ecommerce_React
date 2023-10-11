@@ -1,0 +1,224 @@
+@media screen {
+  @media (max-width: 700px) {
+   @keyframes scale-in-ver-bottom{0%{-webkit-transform:scaleY(0);transform:scaleY(0);-webkit-transform-origin:0 100%;transform-origin:0 100%;opacity:1}100%{-webkit-transform:scaleY(1);transform:scaleY(1);-webkit-transform-origin:0 100%;transform-origin:0 100%;opacity:1}}
+    
+   @keyframes scale-in-ver-bottom{0%{-webkit-transform:scaleY(0);transform:scaleY(0);-webkit-transform-origin:0 100%;transform-origin:0 100%;opacity:1}100%{-webkit-transform:scaleY(1);transform:scaleY(1);-webkit-transform-origin:0 100%;transform-origin:0 100%;opacity:1}}
+
+
+
+    .carousel {
+      display: flex;
+      
+    }
+    .title{
+      background-color: rgb(35, 34, 34);
+      color: #aeb0b2;
+      top: 0;
+      margin: 0;
+      padding: 10px;
+    }
+    .one {
+     width: 100vw;
+     height: 100%;
+     z-index: 1;
+     display: flex;
+     flex-direction: column;
+    }
+    .carousel-image{
+      display: flex;
+      flex-direction: column;
+      height: fit-content;
+      min-height: 100%;
+      
+    }
+    .carousel-image img{
+      width: 13rem;
+      height: 13rem;
+      object-fit: contain;
+      border-radius: 10px;
+      background-color: #fffef8;
+      place-self: center;
+      margin: 10px;
+      box-shadow: 1px 1px 40px 1px;
+    }
+    .nombreCarousel{
+      font-size: medium;
+    }
+    .two {
+      position:absolute;
+      background-color: #26272d4f;
+      backdrop-filter: blur(10px);
+      display: flex;
+      flex-direction: column;
+      transition: ease-in-out;
+      width: 12rem;
+      height: 3rem;
+      object-fit: contain;
+      margin: 0  auto;
+      border-radius: 15px;
+      padding: 5px;
+      margin: 0 auto;
+      justify-content: center;
+    }
+    .relleno{
+      padding-top: 10px;
+      position:relative;
+      width: 13rem;
+      height: 3rem;
+      display: flex;
+      margin: 0 auto;
+      flex-direction: column-reverse;
+    }
+    .openBtn{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 3000;
+      width: 100vw;
+      height: 15rem;
+      opacity: 0;
+    }
+    .nombreCarousel, .precioCarousel{
+      padding: 0%;
+      margin: 0%;
+      bottom: 0;
+    }
+    
+    .info2{
+      display: none;
+    }
+
+    .twoShow{
+      position:absolute;
+      background-color: #26272d4f;
+      backdrop-filter: blur(10px);
+      display: flex;
+      flex-direction: column;
+      border-radius: 15px;
+      padding: 5px;
+      z-index: 5;
+      background-color: #26272d4f;
+      backdrop-filter: blur(10px);
+      display: flex;
+      flex-direction: column; 
+      animation: scale-in-ver-bottom .5s cubic-bezier(.25,.46,.45,.94) both;
+      width: 13rem;
+      
+    }
+    .twoShow .info2{
+      display: flex;
+      flex-direction: column;
+    }
+
+    
+    
+    
+    /* Estilo para dar forma redonda a los botones */
+    .carousel-button {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%; /* Esto hace que el botón sea redondo */
+      background-color: white; /* Color de fondo predeterminado */
+      border: none; /* Borde gris por defecto */
+      margin: 0 5px; /* Espaciado entre botones */
+    }
+    
+    /* Estilo para el botón activo (en gris) */
+    .carousel-button.active {
+      background-color: gray;
+    }
+    .carousel-buttons{
+      margin: 0 auto;
+      width: fit-content;
+    }
+  }
+  @media(min-width: 701px){
+    .carousel{
+      width: 100vw;
+      display: grid;
+      grid-template-columns: auto auto;
+      background-color: #fffef8;
+      height: 40vh;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+    .one {
+      width: 100vw;
+      height: 40vh;
+      z-index: 1;
+      grid-column: 2;
+      grid-row: 1;
+     }
+     
+    .carousel-image{
+      display: flex;
+      height: 100%;
+      width: 100%;
+    }
+    .carousel-image img{
+      width: 15rem;
+      height: 15rem;
+      object-fit: contain;
+      border-radius: 10px;
+      background-color: #fffef8;
+      place-self: center;
+      margin: 10px;
+      box-shadow: 1px 1px 40px 1px;
+    }
+    .CardCarousel > h1{
+      vertical-align: top;
+      padding: 0;
+    }
+    .two{
+      background-color: #dccfec;
+      border-radius: 15px;
+      margin: 0 auto;
+      height: 13rem;
+      max-width: 30rem;
+      margin-top: 5px;
+      text-align: justify ;
+      box-shadow: 1px 1px 10px;
+      padding: 5px;
+    } 
+    .relleno{
+      margin: 0 auto;
+    }
+    
+    /*=======================================================================================================*/
+    
+    /* Agregar una transición suave (ease) a la propiedad transform */
+    /* Agregar una transición suave (ease) a la propiedad opacity */
+    /* Agregar una transición suave (ease) a la propiedad opacity */
+    
+    
+    /* Estilo para dar forma redonda a los botones */
+    .carousel-button {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%; /* Esto hace que el botón sea redondo */
+      background-color: rgb(14, 14, 15); /* Color de fondo predeterminado */
+      border: none; /* Borde gris por defecto */
+      margin: 0 5px; /* Espaciado entre botones */
+    }
+    .carousel-buttons{
+      position: relative;
+      margin: 0 auto;
+      width: 50vw;
+      display: flex;
+      justify-content: space-evenly;
+      background-color: #c0a9b9;
+      padding: 5px;
+      border-radius: 15px;
+    }
+    
+    /* Estilo para el botón activo (en gris) */
+    .carousel-button.active {
+      background-color: gray;
+    }
+    .openBtn{
+      display: none;
+    }
+  }
+  
+  
+}

@@ -44,8 +44,8 @@ const RegisterForm = ({onRegister})=>{
     };
 
     return(
-        <div className="Registro">
-            <h2>Registro</h2>
+        <form className="registro">
+            <h2 className="title2">Regístrate</h2>
             <input
             id="name"
             type="text"
@@ -67,10 +67,11 @@ const RegisterForm = ({onRegister})=>{
             type="password"
             placeholder="Password"
             value={password}
+            autoComplete="true"
             onChange={(e)=> setPassword(e.target.value)}
             />
-            <button onClick={handleRegister}>Registrar</button>
-        </div>  
+            <button className="button1" onClick={handleRegister}>Registrar</button>
+        </form>  
     );
 };
 

@@ -62,17 +62,43 @@ class OfertaCarousel extends Component {
   };
 
   render() {
-    const { currentIndex, productos } = this.state;
+    const { currentIndex, productos, open } = this.state;
     const currentProduct = productos[currentIndex];
 
     return (
       <div className="carousel">
         <div className="carousel-content one">
+        <button className="openBtn"
+                    onClick={()=>{
+                      if(!open){
+                        this.setState ({open: true})
+                      }else{
+                        this.setState ({open: false})
+                      }}} >
+            </button>
           <div className="carousel-image">
             <img
               src={currentProduct ? currentProduct.imagen : ""}
               alt={currentProduct ? currentProduct.nombre : ""}
             />
+          <div className="relleno">
+          <div className={open?"carousel-info twoShow" : "carousel-info two"}>
+          {currentProduct && (
+            <>
+              <div id="Card" className="CardCarousel" key={currentProduct.id}>
+                <h1 className="nombreCarousel">{currentProduct.name}</h1>
+                <p className="precioCarousel">Precio: ${currentProduct.price}</p>
+                <div className="info2">
+                  <p className="categoria">Categoría: {currentProduct.type}</p>
+                  <p className="material">Material: {currentProduct.material}</p>
+                  <p className="descripcion">Descripción: {currentProduct.description}</p>
+                </div>
+              </div>
+            </>
+          )}
+        </div>
+          </div>
+       
           </div>
           <div className="carousel-buttons">
             {productos.map((producto, index) => (
@@ -88,19 +114,7 @@ class OfertaCarousel extends Component {
             ))}
           </div>
         </div>
-        <div className="carousel-info two">
-          {currentProduct && (
-            <>
-              <div id="Card" className="Card" key={currentProduct.id}>
-                <h1>{currentProduct.name}</h1>
-                <p>Precio: ${currentProduct.price}</p>
-                <p>Categoría: {currentProduct.type}</p>
-                <p>Material: {currentProduct.material}</p>
-                <p>Descripción: {currentProduct.description}</p>
-              </div>
-            </>
-          )}
-        </div>
+        
       </div>
     );
   }

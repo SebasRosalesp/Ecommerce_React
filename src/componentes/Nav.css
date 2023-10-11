@@ -1,6 +1,6 @@
 @media screen {
 
-        @media (max-width: 991.98px) {
+        @media (max-width: 700px) {
             @keyframes slide-right{0%{transform:translateX(-150px)}100%{transform:translateX(0px)}}
 
            @keyframes slide-left{0%{transform:translateX(0)}100%{transform:translateX(-100vw)}}
@@ -46,7 +46,6 @@
                 height: auto;
             }
             ul{
-                border: 1px solid white;
                 padding: 0;
                 padding-top: 40px;
             }
@@ -55,10 +54,17 @@
                 flex-direction: column;
                 padding-bottom: 30px;
             }
+            li a{
+                color: #aeb0b2;
+                text-decoration: none;
+            }
+            a:visited{
+                color:'#aeb0b2';
+            }
 
         }
     
-    @media (min-width: 991.99px){
+    @media (min-width: 701px){
         @keyframes slide-right{0%{transform:translateX(-150px)}100%{transform:translateX(0px)}}
 
         @keyframes slide-left{0%{transform:translateX(0)}100%{transform:translateX(-100vw)}}
@@ -67,10 +73,9 @@
             position: relative;
             display: flex;
             flex-direction: row;
-            
+            background-color: black;
         }
         .hamburger{
-            border: 1px solid white;
             display: flex;
             width: 100vw;
             padding-top: 40px;
@@ -80,16 +85,22 @@
             display: flex;
             flex-direction: column;
             width: 30vw;
-            border: 1px solid white;
             place-items: flex-end;
             padding-right: 2rem;
+        }
+        a {
+            text-decoration: none;
+            color: #aeb0b2;
+            font-family: 'Young Serif', serif;
+        }
+        .right p{
+            color: #aeb0b2;
         }
         .navButton{
             display: none;
         }
         
         ul{
-            border: 1px solid white;
             display: flex;
             width: 50vw;
             justify-content: space-evenly;
@@ -97,15 +108,17 @@
         li{
             list-style: none;
         }
+
         .userContainer{
             display: flex;
             flex-direction: row;
+            padding-right: 10px;
         }
         .userContainer p{
             display: none;
         }
         .userContainer img{
-            place-self: center;
+            
             width: 2rem;
             height: auto;
             border-radius: 50%;

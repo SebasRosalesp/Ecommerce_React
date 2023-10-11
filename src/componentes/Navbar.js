@@ -32,6 +32,8 @@ const Navbar = () =>{
     }
     return(
         <div className= 'navbar'>
+            
+            
             <button className='navButton' onClick={change}>
             <div id="nav-icon1" className={button? 'open':''}>
                     <span></span>
@@ -40,14 +42,14 @@ const Navbar = () =>{
             </div>
                     
             </button>
-            <div className={hamburger ? 'showHamburger': 'hamburger'}>
             
-                
+            <div className={hamburger ? 'showHamburger': 'hamburger'}>
                 <ul>
                     <li><Link to="Inicio">Inicio</Link></li>
                     <li><Link to="Productos">Productos</Link></li>
                     <li><Link to ="Registro">Registrate || Inicia sesión</Link></li>
                     <li><Link to="Carrito">Carrito</Link></li>
+                    <li><Link to='Contacto'>Contáctenos</Link></li>
                 </ul>
                 <div className="right">
                     <Usuario inicio={false}/>

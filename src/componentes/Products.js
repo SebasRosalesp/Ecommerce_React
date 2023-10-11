@@ -6,8 +6,8 @@ import List from "./List";
 const Products = ()=> {
 
     return(
-        <div>
-            <p>Productos</p>
+        <div className="products">
+            <h2 className="title"> Productos</h2>
             <List/>
         </div>   
     )

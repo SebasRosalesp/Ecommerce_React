@@ -1,0 +1,103 @@
+@media screen {
+    @media(max-width:700px){
+        .loggin{    
+            display: flex;
+            flex-direction: column;
+        }
+        .loggin input{
+            border-radius: 7px;
+            border: none;
+            padding: 5px;
+            margin: 10px;
+            justify-content: center;
+        }
+        .button1{
+            border-radius: 7px;
+            border: none;
+            padding: 5px;
+            width: 10rem;
+            margin: 0 auto;
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+        .divisor{
+            width: 60vw;
+            height: 3px;
+            background-color: black;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+        .registro{
+            display: flex;
+            flex-direction: column;
+        }
+        .registro input{
+            border-radius: 7px;
+            border: none;
+            padding: 5px;
+            margin: 10px;
+        }
+        .title{
+            margin-bottom: 20px;
+        }
+        .title2{
+            border: 1px solid;
+            border-radius: 10px;
+            width: 50vw;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+    }
+    @media(min-width:701px){
+        .loggin{
+            display: flex;
+            flex-direction: row;
+        }
+        .logginContainer, .registerContainer{
+            display: flex;
+            flex-direction: column;
+            place-content: center;
+            width: 25rem; 
+        }
+        .logginContainer{
+            margin: 0 auto;
+        }
+        .registerContainer{
+            margin: 0 auto;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+        form input{
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+        }
+        .divisor{
+            width: 3px;
+            height: 20rem;
+            background-color: black;
+            padding: 0;
+        }
+        .button1{
+            border-radius: 7px;
+            border: none;
+            padding: 5px;
+            width: 10rem;
+            margin: 0 auto;
+            margin-top: 20px;
+            margin-bottom: 50px;
+            background-color: rgb(192, 185, 185);
+        }
+        .button1:hover{
+            background-color: gray;
+        }
+          
+    }
+}
